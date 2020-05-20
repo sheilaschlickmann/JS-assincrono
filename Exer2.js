@@ -16,7 +16,7 @@ function buscarUser(){
 
     axios.get('https://api.github.com/users/' + user + '/repos')
     .then(function (response) {
-        console.log(preencheLista(response.data));
+        preencheLista(response.data);
     })
     .catch(function(error){
         console.warn(error);
