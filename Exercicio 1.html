@@ -1,0 +1,35 @@
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    
+    <body>
+        
+        <script>
+
+function checaIdade(idade){
+    return new Promise(function(resolve, reject){
+         setTimeout(function(){
+             if (idade > 18){
+             resolve()
+             }else{
+             reject()
+             }
+         },2000) 
+     })
+    }
+
+checaIdade(15)
+.then(function(response){
+        console.log("Maior de 18 anos")         
+         
+})
+
+.catch(function(error){
+        console.log("Menor de 18 anos")
+})
+
+        </script>
+    </body>
+</html>
